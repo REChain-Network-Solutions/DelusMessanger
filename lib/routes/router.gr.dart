@@ -1,4 +1,3 @@
-// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -10,7 +9,6 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i25;
-import 'package:flutter/material.dart' as _i26;
 import 'package:delus_messenger/routes/router.dart' as _i7;
 import 'package:delus_messenger/screens/activation/activation_screen.dart'
     as _i2;
@@ -47,140 +45,305 @@ import 'package:delus_messenger/screens/sign_up/sign_up_screen.dart' as _i22;
 import 'package:delus_messenger/screens/splash/splash_screen.dart' as _i23;
 import 'package:delus_messenger/screens/two_factor_auth/two_factor_auth_screen.dart'
     as _i24;
+import 'package:flutter/material.dart' as _i26;
+
+abstract class $AppRouter extends _i25.RootStackRouter {
+  $AppRouter({super.navigatorKey});
+
+  @override
+  final Map<String, _i25.PageFactory> pagesMap = {
+    ActivationResetRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.ActivationResetScreen(),
+      );
+    },
+    ActivationRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.ActivationScreen(),
+      );
+    },
+    ApprovalRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i3.ApprovalScreen(),
+      );
+    },
+    CallsRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i4.CallsScreen(),
+      );
+    },
+    ChatsRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i5.ChatsScreen(),
+      );
+    },
+    ContactUsRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i6.ContactUsScreen(),
+      );
+    },
+    ContactsRouter.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i7.ContactsRouterPage(),
+      );
+    },
+    ContactsRoute.name: (routeData) {
+      final args = routeData.argsAs<ContactsRouteArgs>(
+          orElse: () => const ContactsRouteArgs());
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i8.ContactsScreen(key: args.key),
+      );
+    },
+    ConversationRoute.name: (routeData) {
+      final args = routeData.argsAs<ConversationRouteArgs>(
+          orElse: () => const ConversationRouteArgs());
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i9.ConversationScreen(
+          key: args.key,
+          conversationId: args.conversationId,
+          userId: args.userId,
+          user: args.user,
+        ),
+      );
+    },
+    ForgetPasswordConfirmRoute.name: (routeData) {
+      final args = routeData.argsAs<ForgetPasswordConfirmRouteArgs>();
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i10.ForgetPasswordConfirmScreen(
+          key: args.key,
+          email: args.email,
+        ),
+      );
+    },
+    ForgetPasswordResetRoute.name: (routeData) {
+      final args = routeData.argsAs<ForgetPasswordResetRouteArgs>();
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i11.ForgetPasswordResetScreen(
+          key: args.key,
+          email: args.email,
+          resetKey: args.resetKey,
+        ),
+      );
+    },
+    ForgetPasswordRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i12.ForgetPasswordScreen(),
+      );
+    },
+    GettingStartedRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i13.GettingStartedScreen(),
+      );
+    },
+    MainRoute.name: (routeData) {
+      final args =
+          routeData.argsAs<MainRouteArgs>(orElse: () => const MainRouteArgs());
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i14.MainScreen(key: args.key),
+      );
+    },
+    PackagesRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i15.PackagesScreen(),
+      );
+    },
+    SearchRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i16.SearchScreen(),
+      );
+    },
+    SettingsDeleteRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i17.SettingsDeleteScreen(),
+      );
+    },
+    SettingsLanguagesRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i18.SettingsLanguagesScreen(),
+      );
+    },
+    SettingsRouter.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i7.SettingsRouterPage(),
+      );
+    },
+    SettingsRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i19.SettingsScreen(),
+      );
+    },
+    SettingsThemeRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i20.SettingsThemeScreen(),
+      );
+    },
+    SignInRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i21.SignInScreen(),
+      );
+    },
+    SignUpRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i22.SignUpScreen(),
+      );
+    },
+    SplashRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i23.SplashScreen(),
+      );
+    },
+    TwoFactorAuthRoute.name: (routeData) {
+      final args = routeData.argsAs<TwoFactorAuthRouteArgs>();
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i24.TwoFactorAuthScreen(
+          key: args.key,
+          userId: args.userId,
+          method: args.method,
+        ),
+      );
+    },
+  };
+}
 
 /// generated route for
 /// [_i1.ActivationResetScreen]
 class ActivationResetRoute extends _i25.PageRouteInfo<void> {
   const ActivationResetRoute({List<_i25.PageRouteInfo>? children})
-    : super(ActivationResetRoute.name, initialChildren: children);
+      : super(
+          ActivationResetRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ActivationResetRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i1.ActivationResetScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i2.ActivationScreen]
 class ActivationRoute extends _i25.PageRouteInfo<void> {
   const ActivationRoute({List<_i25.PageRouteInfo>? children})
-    : super(ActivationRoute.name, initialChildren: children);
+      : super(
+          ActivationRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ActivationRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i2.ActivationScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i3.ApprovalScreen]
 class ApprovalRoute extends _i25.PageRouteInfo<void> {
   const ApprovalRoute({List<_i25.PageRouteInfo>? children})
-    : super(ApprovalRoute.name, initialChildren: children);
+      : super(
+          ApprovalRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ApprovalRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i3.ApprovalScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i4.CallsScreen]
 class CallsRoute extends _i25.PageRouteInfo<void> {
   const CallsRoute({List<_i25.PageRouteInfo>? children})
-    : super(CallsRoute.name, initialChildren: children);
+      : super(
+          CallsRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'CallsRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i4.CallsScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i5.ChatsScreen]
 class ChatsRoute extends _i25.PageRouteInfo<void> {
   const ChatsRoute({List<_i25.PageRouteInfo>? children})
-    : super(ChatsRoute.name, initialChildren: children);
+      : super(
+          ChatsRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ChatsRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i5.ChatsScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i6.ContactUsScreen]
 class ContactUsRoute extends _i25.PageRouteInfo<void> {
   const ContactUsRoute({List<_i25.PageRouteInfo>? children})
-    : super(ContactUsRoute.name, initialChildren: children);
+      : super(
+          ContactUsRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ContactUsRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i6.ContactUsScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i7.ContactsRouterPage]
 class ContactsRouter extends _i25.PageRouteInfo<void> {
   const ContactsRouter({List<_i25.PageRouteInfo>? children})
-    : super(ContactsRouter.name, initialChildren: children);
+      : super(
+          ContactsRouter.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ContactsRouter';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i7.ContactsRouterPage();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i8.ContactsScreen]
 class ContactsRoute extends _i25.PageRouteInfo<ContactsRouteArgs> {
-  ContactsRoute({_i26.Key? key, List<_i25.PageRouteInfo>? children})
-    : super(
-        ContactsRoute.name,
-        args: ContactsRouteArgs(key: key),
-        initialChildren: children,
-      );
+  ContactsRoute({
+    _i26.Key? key,
+    List<_i25.PageRouteInfo>? children,
+  }) : super(
+          ContactsRoute.name,
+          args: ContactsRouteArgs(key: key),
+          initialChildren: children,
+        );
 
   static const String name = 'ContactsRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<ContactsRouteArgs>(
-        orElse: () => const ContactsRouteArgs(),
-      );
-      return _i8.ContactsScreen(key: args.key);
-    },
-  );
+  static const _i25.PageInfo<ContactsRouteArgs> page =
+      _i25.PageInfo<ContactsRouteArgs>(name);
 }
 
 class ContactsRouteArgs {
@@ -204,32 +367,20 @@ class ConversationRoute extends _i25.PageRouteInfo<ConversationRouteArgs> {
     Map<String, dynamic>? user,
     List<_i25.PageRouteInfo>? children,
   }) : super(
-         ConversationRoute.name,
-         args: ConversationRouteArgs(
-           key: key,
-           conversationId: conversationId,
-           userId: userId,
-           user: user,
-         ),
-         initialChildren: children,
-       );
+          ConversationRoute.name,
+          args: ConversationRouteArgs(
+            key: key,
+            conversationId: conversationId,
+            userId: userId,
+            user: user,
+          ),
+          initialChildren: children,
+        );
 
   static const String name = 'ConversationRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<ConversationRouteArgs>(
-        orElse: () => const ConversationRouteArgs(),
-      );
-      return _i9.ConversationScreen(
-        key: args.key,
-        conversationId: args.conversationId,
-        userId: args.userId,
-        user: args.user,
-      );
-    },
-  );
+  static const _i25.PageInfo<ConversationRouteArgs> page =
+      _i25.PageInfo<ConversationRouteArgs>(name);
 }
 
 class ConversationRouteArgs {
@@ -263,24 +414,25 @@ class ForgetPasswordConfirmRoute
     required String email,
     List<_i25.PageRouteInfo>? children,
   }) : super(
-         ForgetPasswordConfirmRoute.name,
-         args: ForgetPasswordConfirmRouteArgs(key: key, email: email),
-         initialChildren: children,
-       );
+          ForgetPasswordConfirmRoute.name,
+          args: ForgetPasswordConfirmRouteArgs(
+            key: key,
+            email: email,
+          ),
+          initialChildren: children,
+        );
 
   static const String name = 'ForgetPasswordConfirmRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<ForgetPasswordConfirmRouteArgs>();
-      return _i10.ForgetPasswordConfirmScreen(key: args.key, email: args.email);
-    },
-  );
+  static const _i25.PageInfo<ForgetPasswordConfirmRouteArgs> page =
+      _i25.PageInfo<ForgetPasswordConfirmRouteArgs>(name);
 }
 
 class ForgetPasswordConfirmRouteArgs {
-  const ForgetPasswordConfirmRouteArgs({this.key, required this.email});
+  const ForgetPasswordConfirmRouteArgs({
+    this.key,
+    required this.email,
+  });
 
   final _i26.Key? key;
 
@@ -302,28 +454,19 @@ class ForgetPasswordResetRoute
     required String resetKey,
     List<_i25.PageRouteInfo>? children,
   }) : super(
-         ForgetPasswordResetRoute.name,
-         args: ForgetPasswordResetRouteArgs(
-           key: key,
-           email: email,
-           resetKey: resetKey,
-         ),
-         initialChildren: children,
-       );
+          ForgetPasswordResetRoute.name,
+          args: ForgetPasswordResetRouteArgs(
+            key: key,
+            email: email,
+            resetKey: resetKey,
+          ),
+          initialChildren: children,
+        );
 
   static const String name = 'ForgetPasswordResetRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<ForgetPasswordResetRouteArgs>();
-      return _i11.ForgetPasswordResetScreen(
-        key: args.key,
-        email: args.email,
-        resetKey: args.resetKey,
-      );
-    },
-  );
+  static const _i25.PageInfo<ForgetPasswordResetRouteArgs> page =
+      _i25.PageInfo<ForgetPasswordResetRouteArgs>(name);
 }
 
 class ForgetPasswordResetRouteArgs {
@@ -349,55 +492,46 @@ class ForgetPasswordResetRouteArgs {
 /// [_i12.ForgetPasswordScreen]
 class ForgetPasswordRoute extends _i25.PageRouteInfo<void> {
   const ForgetPasswordRoute({List<_i25.PageRouteInfo>? children})
-    : super(ForgetPasswordRoute.name, initialChildren: children);
+      : super(
+          ForgetPasswordRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'ForgetPasswordRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i12.ForgetPasswordScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i13.GettingStartedScreen]
 class GettingStartedRoute extends _i25.PageRouteInfo<void> {
   const GettingStartedRoute({List<_i25.PageRouteInfo>? children})
-    : super(GettingStartedRoute.name, initialChildren: children);
+      : super(
+          GettingStartedRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'GettingStartedRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i13.GettingStartedScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i14.MainScreen]
 class MainRoute extends _i25.PageRouteInfo<MainRouteArgs> {
-  MainRoute({_i26.Key? key, List<_i25.PageRouteInfo>? children})
-    : super(
-        MainRoute.name,
-        args: MainRouteArgs(key: key),
-        initialChildren: children,
-      );
+  MainRoute({
+    _i26.Key? key,
+    List<_i25.PageRouteInfo>? children,
+  }) : super(
+          MainRoute.name,
+          args: MainRouteArgs(key: key),
+          initialChildren: children,
+        );
 
   static const String name = 'MainRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<MainRouteArgs>(
-        orElse: () => const MainRouteArgs(),
-      );
-      return _i14.MainScreen(key: args.key);
-    },
-  );
+  static const _i25.PageInfo<MainRouteArgs> page =
+      _i25.PageInfo<MainRouteArgs>(name);
 }
 
 class MainRouteArgs {
@@ -415,160 +549,140 @@ class MainRouteArgs {
 /// [_i15.PackagesScreen]
 class PackagesRoute extends _i25.PageRouteInfo<void> {
   const PackagesRoute({List<_i25.PageRouteInfo>? children})
-    : super(PackagesRoute.name, initialChildren: children);
+      : super(
+          PackagesRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'PackagesRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i15.PackagesScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i16.SearchScreen]
 class SearchRoute extends _i25.PageRouteInfo<void> {
   const SearchRoute({List<_i25.PageRouteInfo>? children})
-    : super(SearchRoute.name, initialChildren: children);
+      : super(
+          SearchRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SearchRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i16.SearchScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i17.SettingsDeleteScreen]
 class SettingsDeleteRoute extends _i25.PageRouteInfo<void> {
   const SettingsDeleteRoute({List<_i25.PageRouteInfo>? children})
-    : super(SettingsDeleteRoute.name, initialChildren: children);
+      : super(
+          SettingsDeleteRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SettingsDeleteRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i17.SettingsDeleteScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i18.SettingsLanguagesScreen]
 class SettingsLanguagesRoute extends _i25.PageRouteInfo<void> {
   const SettingsLanguagesRoute({List<_i25.PageRouteInfo>? children})
-    : super(SettingsLanguagesRoute.name, initialChildren: children);
+      : super(
+          SettingsLanguagesRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SettingsLanguagesRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i18.SettingsLanguagesScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i7.SettingsRouterPage]
 class SettingsRouter extends _i25.PageRouteInfo<void> {
   const SettingsRouter({List<_i25.PageRouteInfo>? children})
-    : super(SettingsRouter.name, initialChildren: children);
+      : super(
+          SettingsRouter.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SettingsRouter';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i7.SettingsRouterPage();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i19.SettingsScreen]
 class SettingsRoute extends _i25.PageRouteInfo<void> {
   const SettingsRoute({List<_i25.PageRouteInfo>? children})
-    : super(SettingsRoute.name, initialChildren: children);
+      : super(
+          SettingsRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SettingsRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i19.SettingsScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i20.SettingsThemeScreen]
 class SettingsThemeRoute extends _i25.PageRouteInfo<void> {
   const SettingsThemeRoute({List<_i25.PageRouteInfo>? children})
-    : super(SettingsThemeRoute.name, initialChildren: children);
+      : super(
+          SettingsThemeRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SettingsThemeRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i20.SettingsThemeScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i21.SignInScreen]
 class SignInRoute extends _i25.PageRouteInfo<void> {
   const SignInRoute({List<_i25.PageRouteInfo>? children})
-    : super(SignInRoute.name, initialChildren: children);
+      : super(
+          SignInRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SignInRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i21.SignInScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i22.SignUpScreen]
 class SignUpRoute extends _i25.PageRouteInfo<void> {
   const SignUpRoute({List<_i25.PageRouteInfo>? children})
-    : super(SignUpRoute.name, initialChildren: children);
+      : super(
+          SignUpRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SignUpRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i22.SignUpScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
 /// [_i23.SplashScreen]
 class SplashRoute extends _i25.PageRouteInfo<void> {
   const SplashRoute({List<_i25.PageRouteInfo>? children})
-    : super(SplashRoute.name, initialChildren: children);
+      : super(
+          SplashRoute.name,
+          initialChildren: children,
+        );
 
   static const String name = 'SplashRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i23.SplashScreen();
-    },
-  );
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }
 
 /// generated route for
@@ -580,24 +694,19 @@ class TwoFactorAuthRoute extends _i25.PageRouteInfo<TwoFactorAuthRouteArgs> {
     required String method,
     List<_i25.PageRouteInfo>? children,
   }) : super(
-         TwoFactorAuthRoute.name,
-         args: TwoFactorAuthRouteArgs(key: key, userId: userId, method: method),
-         initialChildren: children,
-       );
+          TwoFactorAuthRoute.name,
+          args: TwoFactorAuthRouteArgs(
+            key: key,
+            userId: userId,
+            method: method,
+          ),
+          initialChildren: children,
+        );
 
   static const String name = 'TwoFactorAuthRoute';
 
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      final args = data.argsAs<TwoFactorAuthRouteArgs>();
-      return _i24.TwoFactorAuthScreen(
-        key: args.key,
-        userId: args.userId,
-        method: args.method,
-      );
-    },
-  );
+  static const _i25.PageInfo<TwoFactorAuthRouteArgs> page =
+      _i25.PageInfo<TwoFactorAuthRouteArgs>(name);
 }
 
 class TwoFactorAuthRouteArgs {
