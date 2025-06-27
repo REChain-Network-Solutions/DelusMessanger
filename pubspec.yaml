@@ -42,6 +42,10 @@ dependencies:
   qr_flutter: ^4.0.0
 
   # voice_message_package: ^2.1.4
+  voice_message_package:
+    git:
+      url: https://github.com/sorydima/voice_message_package.git
+      ref: c088266f757d3262f6f1a04969420a78ebbf5071
   syncfusion_flutter_sliders: ^30.1.37 # updated to support intl 0.20.2
   flutter_cache_manager: any
   just_audio: any
