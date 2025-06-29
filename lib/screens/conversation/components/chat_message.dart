@@ -101,12 +101,12 @@ class ChatMessage extends ConsumerWidget {
                                     Container(
                                       padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                                       decoration: BoxDecoration(
-                                        color: Colors.black.withValues(alpha: 0.75),
+                                        color: Colors.black.withOpacity(0.75),
                                         borderRadius: BorderRadius.circular(18),
                                       ),
                                       child: PhotoView(
                                         imageProvider: NetworkImage("${$system['system_uploads']}/${message['image']}"),
-                                        backgroundDecoration: BoxDecoration(color: Colors.black.withValues(alpha: 0)),
+                                        backgroundDecoration: BoxDecoration(color: Colors.black.withOpacity(0)),
                                         minScale: PhotoViewComputedScale.contained,
                                         maxScale: PhotoViewComputedScale.covered * 2,
                                       ),

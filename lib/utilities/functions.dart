@@ -298,7 +298,7 @@ void showSavedOverlay(BuildContext context) {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           decoration: BoxDecoration(
-            color: Colors.black.withValues(alpha: 0.75),
+            color: Colors.black.withOpacity(0.75),
             borderRadius: BorderRadius.circular(18),
           ),
           child: Column(

@@ -16,6 +16,7 @@ class QRCode extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final $user = ref.watch(userProvider);
     final $system = ref.watch(systemProvider);
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
@@ -108,18 +109,19 @@ class QRCode extends ConsumerWidget {
                 const SizedBox(height: 40),
                 ElevatedButton(
                   onPressed: () {
-                    SharePlus.instance.share(
-                      ShareParams(
-                        text: '${$system['system_url']}/${$user['user_name']}',
-                        subject: '${$system['system_title']} - ${$user['user_fullname']}',
-                      ),
+                    final url = "${$system['system_url']}/${$user['user_name']}";
+                    final subject = "${$system['system_title']} - ${$user['user_fullname']}";
+
+                    Share.share(
+                      url,
+                      subject: subject,
                     );
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size.fromHeight(50),
                   ),
                   child: Text(tr("Share")),
-                ),
+                )
               ],
             ),
           ),
