@@ -14,6 +14,11 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
+    plugins {
+        id("com.google.gms.google-services") version "4.4.1"
+    }
+
 }
 
 plugins {
@@ -21,5 +26,14 @@ plugins {
     id("com.android.application") version "8.8.1" apply false
     id("org.jetbrains.kotlin.android") version "1.8.22" apply false
 }
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "DelusMessanger"
 
 include(":app")
