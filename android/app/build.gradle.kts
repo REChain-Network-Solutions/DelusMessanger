@@ -21,7 +21,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("debug")
+            // Removed signingConfig to avoid using debug signing in release build
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
@@ -55,6 +55,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
+// Removed absolute Flutter source path to avoid environment issues
+
+
 flutter {
-    source = """C:\Users\sorydev\Documents\GitHub\DelusMessanger"""
+    source = "../.."
 }
