@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=delus_messenger
+Comment=Delus Messanger on Flutter/Dart.
+Icon=com.example.delus_messenger
+Exec=/usr/bin/com.example.delus_messenger
+X-Nemo-Application-Type=silica-qt5
+
+[X-Application]
+Permissions=Audio;Call;Camera;DeviceInfo;Documents;Downloads;Internet;Location;MediaIndexing;Microphone;Music;NFC;Pictures;PublicDir;PushNotifications;RemovableMedia;ScreenCapture;SecureStorage;Videos;WebView;
+OrganizationName=com.example
+ApplicationName=delus_messenger
