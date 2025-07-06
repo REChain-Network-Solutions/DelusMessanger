@@ -1,5 +1,9 @@
 # DelusMessenger
 
+https://api.codemagic.io/apps/6869a5aea388e184a0ed8849/6869a5aea388e184a0ed8848/status_badge.svg
+
+[![Codemagic build status](https://api.codemagic.io/apps/6869a5aea388e184a0ed8849/6869a5aea388e184a0ed8848/status_badge.svg)](https://codemagic.io/app/6869a5aea388e184a0ed8849/6869a5aea388e184a0ed8848/latest_build)
+
 DelusMessenger is a privacy-first, decentralized messenger built using Flutter and Dart. It is part of the REChain ecosystem and offers P2P, end-to-end encrypted messaging without centralized servers.
 
 ## Features
