@@ -1,5 +1,7 @@
 plugins {
     id("com.android.application")
+    id("kotlin-android")
+    id("$flutterRoot/packages/flutter_tools/gradle/flutter.gradle")
     id("com.google.gms.google-services")
 }
 
