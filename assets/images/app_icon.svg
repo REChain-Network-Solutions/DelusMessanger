@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5e72e4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#825ee4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="256" cy="256" r="256" fill="url(#bgGradient)"/>
+  
+  <!-- Message bubble with shadow effect -->
+  <g filter="drop-shadow(0 8px 16px rgba(0,0,0,0.2))">
+    <!-- Main bubble -->
+    <path d="M120 160C120 140 136 124 156 124H356C376 124 392 140 392 160V280C392 300 376 316 356 316H156C136 316 120 300 120 280V160Z" fill="url(#bubbleGradient)"/>
+    
+    <!-- Message tail -->
+    <path d="M156 316L176 340H236L216 316H156Z" fill="url(#bubbleGradient)"/>
+    
+    <!-- Message lines -->
+    <rect x="140" y="140" width="232" height="8" rx="4" fill="#5e72e4" opacity="0.8"/>
+    <rect x="140" y="160" width="184" height="8" rx="4" fill="#5e72e4" opacity="0.6"/>
+    <rect x="140" y="180" width="200" height="8" rx="4" fill="#5e72e4" opacity="0.7"/>
+    
+    <!-- Send icon -->
+    <path d="M356 180L392 256L356 332L376 256L356 180Z" fill="#5e72e4"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="120" cy="120" r="16" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="392" cy="120" r="12" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="120" cy="392" r="20" fill="rgba(255,255,255,0.1)"/>
+</svg>

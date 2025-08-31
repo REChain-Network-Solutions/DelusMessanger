@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    
+    <!-- Background circle with gradient effect -->
+    <path
+        android:fillColor="#5e72e4"
+        android:pathData="M256,256m-256,0a256,256 0,1 1,512 0a256,256 0,1 1,-512 0"/>
+    
+    <!-- Message bubble with shadow -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M120,160C120,140 136,124 156,124H356C376,124 392,140 392,160V280C392,300 376,316 356,316H156C136,316 120,300 120,280V160Z"/>
+    
+    <!-- Message tail -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M156,316L176,340H236L216,316H156Z"/>
+    
+    <!-- Message lines -->
+    <path
+        android:fillColor="#5e72e4"
+        android:pathData="M140,140H372C374.209,140 376,141.791 376,144V152C376,154.209 374.209,156 372,156H140C137.791,156 136,154.209 136,152V144C136,141.791 137.791,140 140,140Z"/>
+    
+    <path
+        android:fillColor="#5e72e4"
+        android:pathData="M140,160H324C326.209,160 328,161.791 328,164V172C328,174.209 326.209,176 324,176H140C137.791,176 136,174.209 136,172V164C136,161.791 137.791,160 140,160Z"/>
+    
+    <path
+        android:fillColor="#5e72e4"
+        android:pathData="M140,180H340C342.209,180 344,181.791 344,184V192C344,194.209 342.209,196 340,196H140C137.791,196 136,194.209 136,192V184C136,181.791 137.791,180 140,180Z"/>
+    
+    <!-- Send icon -->
+    <path
+        android:fillColor="#5e72e4"
+        android:pathData="M356,180L392,256L356,332L376,256L356,180Z"/>
+    
+    <!-- Decorative elements -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M120,120m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0"
+        android:fillAlpha="0.1"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M392,120m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0"
+        android:fillAlpha="0.1"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M120,392m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"
+        android:fillAlpha="0.1"/>
+</vector>
