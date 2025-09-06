@@ -51,30 +51,30 @@ class _MainScreenState extends ConsumerState<MainScreen> {
     );
   }
 
-  // API Call: registerOneSignalId
-  Future<void> registerOneSignalId() async {
-    final $user = ref.read(userProvider);
-    /* check if oneSignalId is already registered */
-    if ($user.isEmpty || ($user['session_onesignal_user_id'] != null && $user['session_onesignal_user_id'].isNotEmpty)) {
-      return;
-    }
-    /* get oneSignalId */
-    final oneSignalId = await getOneSignalId();
-    if (oneSignalId == null) {
-      return;
-    }
-    /* register oneSignalId */
-    final response = await sendAPIRequest(
-      'user/onesignal',
-      method: 'POST',
-      body: {
-        'onesignal_id': oneSignalId,
-      },
-    );
-    if (response['statusCode'] == 200) {
-      ref.read(userProvider.notifier).state['session_onesignal_user_id'] = oneSignalId;
-    }
-  }
+  // // API Call: registerOneSignalId
+  // Future<void> registerOneSignalId() async {
+  //   final $user = ref.read(userProvider);
+  //   /* check if oneSignalId is already registered */
+  //   if ($user.isEmpty || ($user['session_onesignal_user_id'] != null && $user['session_onesignal_user_id'].isNotEmpty)) {
+  //     return;
+  //   }
+  //   /* get oneSignalId */
+  //   final oneSignalId = await getOneSignalId();
+  //   if (oneSignalId == null) {
+  //     return;
+  //   }
+  //   /* register oneSignalId */
+  //   final response = await sendAPIRequest(
+  //     'user/onesignal',
+  //     method: 'POST',
+  //     body: {
+  //       'onesignal_id': oneSignalId,
+  //     },
+  //   );
+  //   if (response['statusCode'] == 200) {
+  //     ref.read(userProvider.notifier).state['session_onesignal_user_id'] = oneSignalId;
+  //   }
+  // }
 
   // Heartbeat: initHeartbeat
   void initHeartbeat() {
@@ -96,12 +96,12 @@ class _MainScreenState extends ConsumerState<MainScreen> {
     });
   }
 
-  @override
-  void initState() {
-    super.initState();
-    initHeartbeat();
-    registerOneSignalId();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   initHeartbeat();
+  //   registerOneSignalId();
+  // }
 
   @override
   void dispose() {

@@ -33,43 +33,43 @@ final Logger logger = Logger(
   ),
 );
 
-// initOneSignal
-String? _lastNotificationId;
-Future<void> initOneSignal(AppRouter appRouter) async {
-  if (config.oneSignalAppId.isEmpty) return null;
-  OneSignal.initialize(config.oneSignalAppId);
-  OneSignal.Notifications.addClickListener((event) async {
-    if (_lastNotificationId == event.notification.notificationId) {
-      return;
-    }
-    _lastNotificationId = event.notification.notificationId;
-    final launchUrl = event.notification.launchUrl;
-    if (launchUrl != null && launchUrl.startsWith('delus_messenger://')) {
-      final uri = Uri.parse(launchUrl);
-      final pathSegments = uri.pathSegments;
-      if (pathSegments.isNotEmpty && pathSegments[0] == 'messages') {
-        final conversationId = pathSegments.length > 1 ? pathSegments[1] : null;
-        if (conversationId != null) {
-          await appRouter.push(ConversationRoute(conversationId: conversationId));
-          await appRouter.root.replaceAll([
-            MainRoute(children: [
-              ChatsRoute(),
-            ]),
-          ]);
-        }
-      }
-    }
-  });
-}
+// // initOneSignal
+// String? _lastNotificationId;
+// Future<void> initOneSignal(AppRouter appRouter) async {
+//   if (config.oneSignalAppId.isEmpty) return null;
+//   OneSignal.initialize(config.oneSignalAppId);
+//   OneSignal.Notifications.addClickListener((event) async {
+//     if (_lastNotificationId == event.notification.notificationId) {
+//       return;
+//     }
+//     _lastNotificationId = event.notification.notificationId;
+//     final launchUrl = event.notification.launchUrl;
+//     if (launchUrl != null && launchUrl.startsWith('delus_messenger://')) {
+//       final uri = Uri.parse(launchUrl);
+//       final pathSegments = uri.pathSegments;
+//       if (pathSegments.isNotEmpty && pathSegments[0] == 'messages') {
+//         final conversationId = pathSegments.length > 1 ? pathSegments[1] : null;
+//         if (conversationId != null) {
+//           await appRouter.push(ConversationRoute(conversationId: conversationId));
+//           await appRouter.root.replaceAll([
+//             MainRoute(children: [
+//               ChatsRoute(),
+//             ]),
+//           ]);
+//         }
+//       }
+//     }
+//   });
+// }
 
-// getOneSignalId
-Future<String?> getOneSignalId() async {
-  final permission = await OneSignal.Notifications.permission;
-  if (permission != OSNotificationPermission.authorized) {
-    await OneSignal.Notifications.requestPermission(true);
-  }
-  return await OneSignal.User.pushSubscription.id;
-}
+// // getOneSignalId
+// Future<String?> getOneSignalId() async {
+//   final permission = await OneSignal.Notifications.permission;
+//   if (permission != OSNotificationPermission.authorized) {
+//     await OneSignal.Notifications.requestPermission(true);
+//   }
+//   return await OneSignal.User.pushSubscription.id;
+// }
 
 // goHome
 goHome(WidgetRef ref, {context, returnRoute = false}) {

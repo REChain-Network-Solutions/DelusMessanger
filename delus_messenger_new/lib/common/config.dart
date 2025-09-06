@@ -8,8 +8,8 @@
 /* =============================== */
 
 // Delus API Key & Secret
-const String apiKey = "9deafdd0f5a42c1bccd7ad32596d83afe5c0a03427fffddc";
-const String apiSecret = "1addb22a60cb4fa43f76d60c921ce38e88c3d917d67bc194c92a2554734fdcf3";
+const String apiKey = "9dfc35054dbfa0b1805b3bfb5f6689f007ca969041de56aa";
+const String apiSecret = "3ec8db2c6df4173c3e413a45a1b024c6074f8395f8017cebdf1d330a06c5f250";
 
 // Delus API URL
 const String apiURL = "https://delus.monster";
@@ -22,7 +22,7 @@ const bool debugEnabled = false;
 /* =============================== */
 
 // OneSignal App ID
-const String oneSignalAppId = "d79f0e91-1167-42fe-8cd6-9c1149071211";
+// const String oneSignalAppId = "";
 
 /* =============================== */
 /* 🛑 DON'T EDIT BELOW THIS LINE 🛑 */

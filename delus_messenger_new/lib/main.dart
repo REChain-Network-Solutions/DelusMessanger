@@ -46,7 +46,7 @@ Future<void> main() async {
       ),
     ),
   );
-  await initOneSignal(appRouter);
+  // await initOneSignal(appRouter);
 }
 
 class MyApp extends ConsumerWidget {
